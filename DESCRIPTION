@@ -15,3 +15,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/itsamiigoff/MATH4753F25martin
 BugReports: https://github.com/itsamiigoff/MATH4753F25martin/issues
+RoxygenNote: 7.3.2
