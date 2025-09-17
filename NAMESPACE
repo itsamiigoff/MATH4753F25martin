@@ -2,3 +2,9 @@
 
 export(myfirstfunction)
 export(mysum)
+export(scatterhist)
+importFrom(graphics,barplot)
+importFrom(graphics,hist)
+importFrom(graphics,layout)
+importFrom(graphics,mtext)
+importFrom(graphics,par)
