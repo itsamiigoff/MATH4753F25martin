@@ -1,0 +1,51 @@
+---
+title: "Birthday"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753F25martin)
+```
+
+# Mathematical Derivation
+Suppose there are $n$ people in a room, and assume that each birthday is equally likely among $365$ days.  
+We want to find the probability that at least two people share the same birthday.
+
+The number of ways to assign $n$ distinct birthdays to $n$ people is:
+$$^{365}P_n = 365 * 364 * 363 * \cdots * (365 - n + 1)$$
+
+The total number of ways to assign any birthdays (with possible repeats) is:
+$$365^n$$
+
+Thus, the probability that no two people share a birthday is:
+$$P(\overline{A}) = \frac{^{365}P_n}{365^n} = \frac{365!}{(365 - n)! \, 365^n}$$
+
+The probability that at least two people share a birthday is the complement:
+$$P(A) = 1 - P(\overline{A})$$
+Therefore: 
+$$P(A) = 1 - \frac{365 * 364 * 363 * \cdots * (365 - n + 1)}{365^n} = 1-\frac{^{365}P_n}{365^n}$$
+
+# Reformulation Using lfactorial And lchoose
+$$P(\overline{A}) = \frac{^{365}P_n}{365^n}$$
+$$log(P(\overline{A})) = log({^{365}P_n})-nlog(365)$$
+$$= log(n!)+log(choose(365,n)) - nlog(365)$$
+$$= lfactorial(n) + lchoose(365,n) - nlog(365)$$
+$$P(A) = 1 - P(\overline{A}) = 1 - exp(log(P(\overline{A})))$$
+$$= 1 - exp(lfactorial(n) + lchoose(365,n) - nlog(365))$$
+
+# Function Body And Test Run
+```{r}
+#birthday <- function(x){1 - exp(lchoose(365,x) + lfactorial(x) - x*log(365))}
+birthday(20:25)
+```
