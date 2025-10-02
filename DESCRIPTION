@@ -10,7 +10,7 @@ Authors@R: c(
     )
   )
 Description: Lab code for 2025.
-License: What license is it under?
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/itsamiigoff/MATH4753F25martin
