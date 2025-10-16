@@ -7,7 +7,7 @@
 myfirstfunction(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{number to be squared}
 }
 \value{
 A list with components x and y, where y is the square of x.

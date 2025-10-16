@@ -1,6 +1,6 @@
 #' My sum
 #'
-#' @param x
+#' @param x item to be summarized
 #'
 #' @returns A summary of the parameter x.
 #' @export

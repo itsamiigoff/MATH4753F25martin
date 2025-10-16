@@ -7,7 +7,7 @@
 birthday(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{number of people in the room}
 }
 \value{
 The probability that two or more people in a class of size x have the same birthday.

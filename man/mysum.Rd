@@ -7,7 +7,7 @@
 mysum(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{item to be summarized}
 }
 \value{
 A summary of the parameter x.

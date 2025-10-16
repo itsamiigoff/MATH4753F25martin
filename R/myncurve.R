@@ -3,6 +3,8 @@
 #' @param mu the mean of the function
 #' @param sigma the standard deviation of the function
 #' @param a the x value to compute the probability
+#' @importFrom graphics curve polygon text
+#' @importFrom stats dnorm pnorm
 #'
 #' @returns the probability P(X≤a) and the graph
 #' @export
