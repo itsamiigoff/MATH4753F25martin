@@ -1,14 +1,17 @@
 #' ddt data
 #'
-#' A subset of ddt data from Australia
+#' A dataset containing DDT concentrations in fish collected from several rivers.
+#' Each record includes river location, species, length, weight, and measured DDT level.
 #'
-#' @format ## `who`
-#' A data frame with 7,240 rows and 60 columns:
+#' @format A data frame with 120 rows and 6 variables:
 #' \describe{
-#'   \item{country}{Country name}
-#'   \item{iso2, iso3}{2 & 3 letter ISO country codes}
-#'   \item{year}{Year}
-#'   ...
+#'   \item{RIVER}{River name or sampling site (e.g., FCM, LCM, SCM, TRM)}
+#'   \item{MILE}{River mile (numeric) indicating sampling location}
+#'   \item{SPECIES}{Fish species (e.g., CCATFISH, SMBUFFALO, LMBASS)}
+#'   \item{LENGTH}{Fish length in centimeters}
+#'   \item{WEIGHT}{Fish weight in grams}
+#'   \item{DDT}{Concentration of DDT (µg/g) in fish tissue}
 #' }
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
+#'
+#' @source Example dataset commonly used in environmental statistics labs (adapted from U.S. Geological Survey sample data)
 "ddt"
